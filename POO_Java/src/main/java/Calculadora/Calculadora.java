@@ -1,4 +1,5 @@
-    package Calculadora;
+
+package Calculadora;
 
 public class Calculadora {
     private double num1;
@@ -7,11 +8,13 @@ public class Calculadora {
     private double num4;
     private double resultado;
     private boolean primo = true;
-    private double contador = 2;
+    private int contador = 2;
     
     public Calculadora(){
         
     }
+    
+    
     
     public double Suma(double n1, double n2){
         this.num1 = n1;
@@ -39,7 +42,7 @@ public class Calculadora {
         resultado = n1 / n2;
         return resultado;
     }
-    public boolean EsPrimo(double numero) {
+    public boolean EsPrimo(int numero) {
         while ((primo) && (contador != numero)) {
 
             if (numero % contador == 0) {

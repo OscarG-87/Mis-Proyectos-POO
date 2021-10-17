@@ -4,9 +4,11 @@
  */
 package Menu;
 import Ahorcado.Frame_Ahorcado;
-import Calculadora.Fram_Calculadora;
+import Calculadora.Frame_Calculadora;
 import Fig_Geometricas.Frame_Figuras;
 import Juego_Roles.Frame_Juego_Roles;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /**
  *
  * @author Oscar
@@ -18,6 +20,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+          
     }
 
     /**
@@ -39,7 +42,9 @@ public class Menu extends javax.swing.JFrame {
 
         jButton1.setText("Figuras Geometricas");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         BtnAhorcado.setText("Ahorcado");
         BtnAhorcado.addActionListener(new java.awt.event.ActionListener() {
@@ -80,25 +85,24 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnAhorcado, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(23, 23, 23)
+                        .addComponent(BtnAhorcado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
                         .addComponent(BtnCalculadora)
-                        .addGap(18, 18, 18)
+                        .addGap(32, 32, 32)
                         .addComponent(jButton2)
-                        .addGap(18, 18, 18)
+                        .addGap(30, 30, 30)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
+                        .addGap(184, 184, 184)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnAhorcado)
                     .addComponent(BtnCalculadora)
@@ -111,14 +115,11 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -126,8 +127,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void BtnCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCalculadoraActionPerformed
         // TODO add your handling code here:
-        Fram_Calculadora fram_calculadora = new Fram_Calculadora();
-        fram_calculadora.setVisible(true);
+        Frame_Calculadora frame_calculadora = new Frame_Calculadora();
+        frame_calculadora.setVisible(true);
         
     }//GEN-LAST:event_BtnCalculadoraActionPerformed
 
@@ -135,6 +136,8 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
        Frame_Ahorcado frame_ahorcado = new Frame_Ahorcado();
        frame_ahorcado.setVisible(true);
+       
+      
     }//GEN-LAST:event_BtnAhorcadoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

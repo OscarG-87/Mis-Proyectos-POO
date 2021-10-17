@@ -2,13 +2,11 @@ package Ahorcado;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Set;
 
 public class Ahorcado {
 
-    String[] animales = {"Z O R R I L L O", "A V E S T R U Z", "P A J A R O"};
+    String[] animales = {"Z O R R I L L O", "A V E S T R U Z", "P A J A R O", "T I G R I L L O", "C A L A M A R", "B A L L E N A", "O R N I T O R R I N C O"};
 
     Random random = new Random();
 
@@ -21,8 +19,7 @@ public class Ahorcado {
     int t = palabra.length;
     
     String[] adivinada = new String[t];
-    ArrayList<Integer> intentos = new ArrayList<Integer>(t);
-    int fallos=0;
+    
 
     public Ahorcado() {
 
@@ -49,21 +46,6 @@ public class Ahorcado {
             return false; 
     }
 
-    public void mostrarPalabra() {
-        for (int i = 0; i < adivinada.length; i++) {
-            if (adivinada[i].equals("")) {
-                System.out.print(" _ ");
-                fallos++;
-            } else {
-                System.out.print(adivinada[i]);
-
-            }
-
-        }
-
-        System.out.println("");
-        intentos.add(fallos);
-        System.out.println(intentos.toArray().length);
-    }
+    
 
 }
